@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enter The Swarm</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            background: #0f0f0f;
+            color: white;
+        }
+
+        /* HERO */
+
+        .hero {
+            height: 70vh;
+
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620');
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* INFO */
+
+        .info {
+            padding: 80px 8%;
+            background: #181818;
+        }
+
+        .info h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: #ffcc00;
+            text-align: center;
+        }
+
+        .info p {
+            font-size: 18px;
+            line-height: 2;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* RULES */
+
+        .rules {
+            padding: 80px 8%;
+        }
+
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .rule-card {
+            background: #1f1f1f;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #ffcc00;
+        }
+
+        .rule-card h3 {
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+
+        /* FORM */
+
+        .form-section {
+            padding: 80px 8%;
+            background: #181818;
+            text-align: center;
+        }
+
+        .form-section h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: #ffcc00;
+        }
+
+        form {
+            max-width: 700px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        form input,
+        form textarea {
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        form textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        form button {
+            padding: 16px;
+            background: #ffcc00;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111;
+            padding: 25px;
+            text-align: center;
+            color: #aaa;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .hero-content p {
+                font-size: 17px;
+            }
+
+            .info h2,
+            .form-section h2 {
+                font-size: 30px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                ENTER THE SWARM
+            </h1>
+
+            <p>
+                This is not just a party.
+                This is a movement for the ignored, unemployed,
+                frustrated and permanently online citizens.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- INFO -->
+
+    <section class="info">
+
+        <h2>
+            Why Join Us?
+        </h2>
+
+        <p>
+
+            We are not here to make fake promises.
+            We are here to raise questions.
+            We are here to talk about unemployment,
+            education, corruption and the problems
+            real citizens face every day.
+
+            No VIP culture.
+            No corporate funding.
+            No fake nationalism.
+            Only public voice.
+
+        </p>
+
+    </section>
+
+    <!-- RULES -->
+
+    <section class="rules">
+
+        <div class="rules-grid">
+
+            <div class="rule-card">
+                <h3>01 • Stay Loud</h3>
+                <p>
+                    Speak for your rights and never stay silent.
+                </p>
+            </div>
+
+            <div class="rule-card">
+                <h3>02 • Stay United</h3>
+                <p>
+                    No religion fights. No caste fights. Only unity.
+                </p>
+            </div>
+
+            <div class="rule-card">
+                <h3>03 • Stay Aware</h3>
+                <p>
+                    Question the system and stay informed.
+                </p>
+            </div>
+
+            <div class="rule-card">
+                <h3>04 • Stay Real</h3>
+                <p>
+                    No fake leaders. No fake promises.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FORM -->
+
+    <section class="form-section">
+
+        <h2>
+            Become A Member
+        </h2>
+
+        <form>
+
+            <input type="text" placeholder="Full Name">
+
+            <input type="email" placeholder="Email">
+
+            <input type="text" placeholder="City">
+
+            <textarea placeholder="Why do you want to join?"></textarea>
+
+            <button>
+                <a href="inter.html">INTER THE MOMENTS</a>
+            </button>
+
+        </form>
+
+    </section>
+
+    <footer>
+
+        © 2026 COCKROACH JANTA PARTY • ALL RANTS RESERVED
+
+    </footer>
+
+</body>
+
+</html>

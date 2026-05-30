@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People's Accountability</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            background: #0f0f0f;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .header {
+            padding: 18px 8%;
+            background: #111;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #ffcc00;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        .hero {
+            height: 90vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-content h1 {
+            font-size: 65px;
+            color: #ffcc00;
+            margin-bottom: 25px;
+        }
+
+        .hero-content p {
+            font-size: 22px;
+            line-height: 1.8;
+        }
+
+        .section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            font-size: 45px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #ffcc00;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #1b1b1b;
+            padding: 30px;
+            border-radius: 14px;
+            border-left: 5px solid #ffcc00;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+
+        .card p {
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        .big-text {
+            background: #181818;
+            padding: 50px;
+            border-radius: 15px;
+            line-height: 2;
+            font-size: 18px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .footer {
+            background: #111;
+            padding: 30px;
+            text-align: center;
+            color: #999;
+            margin-top: 60px;
+        }
+
+        @media(max-width:768px) {
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .hero-content p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .big-text {
+                padding: 25px;
+                font-size: 16px;
+            }
+
+            .header {
+                flex-direction: column;
+            }
+
+            .nav {
+                margin-top: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <div class="logo">
+            People's Accountability
+        </div>
+
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Issues</a>
+            <a href="#">Promises</a>
+            <a href="#">Voices</a>
+        </div>
+
+    </div>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Questions Every Citizen Should Ask
+            </h1>
+
+            <p>
+                This page encourages citizens to stay informed, review public promises critically, and participate
+                responsibly in democracy.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Public Issues & Political Promises
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=1200">
+                <h3>Employment & Youth</h3>
+                <p>
+                    Many young citizens continue to raise concerns about unemployment, rising competition, and limited
+                    opportunities. Across governments and political parties, people often ask whether employment-related
+                    promises have been fulfilled effectively.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200">
+                <h3>Education & Students</h3>
+                <p>
+                    Students frequently discuss exam pressure, paper leaks, expensive education, and uneven access to
+                    quality institutions. Citizens expect long-term reforms instead of short-term political debates.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200">
+                <h3>Farmers & Rural Areas</h3>
+                <p>
+                    Farmers often speak about MSP, crop prices, water shortages, and financial pressure. Public
+                    discussion around agricultural reforms remains an important democratic issue.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Citizen Awareness
+        </h2>
+
+        <div class="big-text">
+
+            <p>
+                A strong democracy depends on informed citizens. Political parties across the spectrum make promises
+                during elections related to jobs, development, infrastructure, education, healthcare, and public safety.
+                Citizens have the right to review those promises carefully and ask questions respectfully.
+            </p>
+
+            <br>
+
+            <p>
+                Rather than supporting leaders blindly, people should compare policies, verify information from reliable
+                sources, and evaluate how public decisions affect everyday life. Democracy becomes healthier when
+                citizens participate responsibly and peacefully.
+            </p>
+
+            <br>
+
+            <p>
+                This website is intended as a public-awareness style design project encouraging civic discussion, youth
+                participation, and democratic engagement. Readers should independently verify political claims and rely
+                on trusted news and official information before forming conclusions.
+            </p>
+
+        </div>
+
+        <div class="gallery">
+
+            <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200">
+
+            <img src="https://images.unsplash.com/photo-1494172961521-33799ddd43a5?q=80&w=1200">
+
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200">
+
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200">
+
+        </div>
+
+    </section>
+
+    <div class="footer">
+        © 2026 PEOPLE'S ACCOUNTABILITY • DEMOCRACY • QUESTIONS • PUBLIC VOICE
+    </div>
+
+</body>
+
+</html>

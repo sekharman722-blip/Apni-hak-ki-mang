@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cockroach Janta Party</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            background: #0f0f0f;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* TOP MOVING BAR */
+
+        .top-bar {
+            background: #111;
+            padding: 10px 0;
+            overflow: hidden;
+            border-bottom: 2px solid #ffcc00;
+        }
+
+        .top-text {
+            white-space: nowrap;
+            display: inline-block;
+            padding-left: 100%;
+            animation: move 30s linear infinite;
+            font-size: 14px;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #151515;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        /* HERO */
+
+        .hero {
+            height: 100vh;
+
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620');
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-content h1 {
+            font-size: 70px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        .hero-content p {
+            font-size: 22px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .hero-content button {
+            padding: 15px 35px;
+            font-size: 18px;
+            border: none;
+            background: #ffcc00;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .hero-content button:hover {
+            transform: scale(1.05);
+        }
+
+        /* STATS */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            padding: 80px 8%;
+            background: #181818;
+        }
+
+        .stat-box {
+            background: #222;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+
+        .stat-box h2 {
+            font-size: 50px;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        /* MANIFESTO */
+
+        .manifesto {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            font-size: 45px;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #ffcc00;
+        }
+
+        .manifesto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .manifesto-card {
+            background: #1c1c1c;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #ffcc00;
+            transition: 0.3s;
+        }
+
+        .manifesto-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .manifesto-card h3 {
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+
+        /* MEMBERSHIP */
+
+        .membership {
+            padding: 80px 8%;
+            background: #181818;
+            text-align: center;
+        }
+
+        .membership p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .join-btn {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 15px 40px;
+            background: #ffcc00;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        /* GALLERY */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 80px 8%;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111;
+            padding: 30px;
+            text-align: center;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .hero-content p {
+                font-size: 18px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+        <div class="top-text">
+            COCKROACH JANTA PARTY • VOICE OF THE LAZY & UNEMPLOYED • FUNDED BY NOTHING • HQ: WHEREVER WIFI WORKS • ALL
+            RANTS RESERVED
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            COCKROACH JANTA PARTY
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Vision</a>
+            <a href="#">Manifesto</a>
+            <a href="#">Join</a>
+        </div>
+
+    </div>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Voice Of The Lazy & Unemployed
+            </h1>
+
+            <p>
+                A political movement for the ignored, frustrated,
+                overworked, underpaid and permanently online citizens.
+            </p>
+
+            <button>
+                JOIN THE PARTY
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+        <div class="stat-box">
+            <h2>5</h2>
+            <p>Demands</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>0</h2>
+            <p>Corporate Donors</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>∞</h2>
+            <p>Patience</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>1</h2>
+            <p>Founder No PA</p>
+        </div>
+
+    </section>
+
+    <!-- MANIFESTO -->
+
+    <section class="manifesto">
+
+        <h2 class="section-title">
+            The Manifesto
+        </h2>
+
+        <div class="manifesto-grid">
+
+            <div class="manifesto-card">
+                <h3>01 Education Reform</h3>
+                <p>
+                    Every student deserves affordable and quality education.
+                </p>
+            </div>
+
+            <div class="manifesto-card">
+                <h3>02 Employment</h3>
+                <p>
+                    Youth need jobs, not endless promises and speeches.
+                </p>
+            </div>
+
+            <div class="manifesto-card">
+                <h3>03 Farmer Support</h3>
+                <p>
+                    Farmers deserve fair prices and proper respect.
+                </p>
+            </div>
+
+            <div class="manifesto-card">
+                <h3>04 Free Voice</h3>
+                <p>
+                    Citizens should speak freely without fear.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MEMBERSHIP -->
+
+    <section class="membership">
+
+        <h2 class="section-title">
+            Join The Swarm
+        </h2>
+
+        <p>
+            Membership is free, lifelong and open for every frustrated citizen who wants change.
+            No VIP culture. No fake promises. No corporate sponsors.
+        </p>
+
+        <a href="join.html" style="text-decoration:none;">
+
+            <button>
+                JOIN THE PARTY
+            </button>
+
+        </a>
+    </section>
+
+    <!-- GALLERY -->
+
+    <section class="gallery">
+
+        <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620">
+
+        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952">
+
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
+        
+
+        <a href="party.html"> VOTE C.J.P</a> | <a href="index.html">HOME PAGE </a>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 COCKROACH JANTA PARTY • ALL RANTS RESERVED
+
+    </footer>
+
+</body>
+
+</html>
