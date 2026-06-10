@@ -1,144 +1,253 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aam Aadmi Ka Hak</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Google</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* FULL SCREEN BACKGROUND */
+        body {
+            margin: 0;
+            font-family: Arial;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: 1s;
+        }
+
+        /* DARK OVERLAY FOR READABILITY */
+        .overlay {
+            background: rgba(0, 0, 0, 0.35);
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* TOP BAR */
+        .top {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            padding: 15px;
+            font-size: 14px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .top a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+        }
+
+        .menu {
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* CENTER */
+        .center {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* GOOGLE LOGO */
+        .logo {
+            font-size: 75px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .logo span:nth-child(1) {
+            color: #4285F4
+        }
+
+        .logo span:nth-child(2) {
+            color: #EA4335
+        }
+
+        .logo span:nth-child(3) {
+            color: #FBBC05
+        }
+
+        .logo span:nth-child(4) {
+            color: #4285F4
+        }
+
+        .logo span:nth-child(5) {
+            color: #34A853
+        }
+
+        .logo span:nth-child(6) {
+            color: #EA4335
+        }
+        .logo span:nth-child(7) {
+            color: #4285F4
+        }
+        .logo span:nth-child(8) {
+            color: #EA4335
+        }
+        .logo span:nth-child(9) {
+            color: #FBBC05
+        }
+        .logo span:nth-child(10) {
+            color: #4285F4
+        }
+        .logo span:nth-child(11) {
+            color: #34A853
+        }
+
+
+        /* SEARCH BOX */
+        input {
+            width: 90%;
+            max-width: 600px;
+            padding: 14px 20px;
+            border-radius: 24px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+        }
+
+        /* BUTTONS */
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 5px;
+            padding: 10px 14px;
+            margin: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: white;
+        }
+
+        /* FOOTER */
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+            z-index: 2;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- TOP MOVING BAR -->
-    <div class="top-ticker">
-        <div class="top-ticker-text">
-            UNDER: GENERAL DISGRUNTLEMENT • SPONSORED BY NO ONE • FUNDED BY NOTHING • HQ: WHEREVER THE WIFI WORKS • NOW
-            ACCEPTING RANTS, RETWEETS, AND RESENTMENT []हमें रोजगार चाहिए,
-            जाति-धर्म की लड़ाई नहीं।
-            हमें शिक्षा, सम्मान और सुरक्षित भविष्य चाहिए।
-            आम आदमी की आवाज अब दबेगी नहीं।”
-        </div>
+    <div class="overlay"></div>
+
+    <div class="top">
+
+        <a href="https://mail.google.com">Gmail</a>
+        <a href="https://www.youtube.com">YouTube</a>
+        <a href="https://www.facebook.com">Facebook</a>
+
+        <div class="menu" onclick="search()">⋮</div>
+
     </div>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
+    <div class="center">
 
         <div class="logo">
-            Aam Aadmi Ka Hak
+            <span>m</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>  
+            <span>I</span><span>n</span><span>d</span><span>i</span><span>a</span>
         </div>
 
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#rights">Adhikar</a>
-            <a href="#issues">Mudda</a>
-            <a href="join.html">Join Party</a>
+        <input id="q" placeholder="Search Google or type URL" onkeydown="enter(event)">
+
+        <div class="buttons">
+
+            <button onclick="search()">Google Search</button>
+            <button onclick="lucky()">I'm Feeling Lucky</button>
+            <button onclick="voice()">🎤 Voice</button>
+            <button onclick="chatGPT()">ChatGPT</button>
+            <button onclick="window.open('https://www.google.com/translate')">Translate</button>
+
+
         </div>
 
     </div>
 
-    <!-- HERO -->
-    <section class="hero">
+    <div class="footer">
+        moogle indian google 0.2 
+        by Arman 
+        
+    </div>
 
-        <div class="hero-content">
+    <script>
 
-            <h1>Janata Ki Awaz</h1>
+        /* BACKGROUND IMAGES (auto change) */
+        let images = [
+            "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+            "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1",
+            "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+            "https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+        ];
 
-            <p>
-                Har aam aadmi ko nyay, adhikar aur sach bolne ki azadi milni chahiye.
-            </p>
+        let i = 0;
 
-            <button onclick="window.location.href='join.html'">
-                Join Movement
-            </button>
+        function changeBG() {
+            document.body.style.backgroundImage = "url('" + images[i] + "')";
+            i = (i + 1) % images.length;
+        }
 
-        </div>
+        changeBG();
+        setInterval(changeBG, 5000);
 
-    </section>
+        /* SEARCH */
+        function search() {
+            let q = document.getElementById("q").value;
+            if (!q) return;
+            window.open("https://www.google.com/search?q=" + encodeURIComponent(q));
+        }
 
-    <!-- RIGHTS -->
-    <section id="rights" class="section">
+        function enter(e) {
+            if (e.key === "Enter") search();
+        }
 
-        <h2 class="section-title">
-            Aam Aadmi Ke Adhikar
-        </h2>
+        function lucky() {
+            window.open("https://www.google.com/doodles");
+        }
+        function chatGPT() {
+            window.open("https://chat.openai.com");
+        }
 
-        <div class="cards">
+        /* VOICE */
+        function voice() {
+            let SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (!SR) { alert("Not supported"); return; }
+            let r = new SR();
+            r.start();
+            r.onresult = e => {
+                document.getElementById("q").value = e.results[0][0].transcript;
+                search();
+            };
+        }
 
-            <div class="card">
-
-                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
-
-                <h3>📚 Shiksha</h3>
-
-                <p>
-                    <a href="https://en.wikipedia.org/wiki/Khan_Sir">Har bachche ko acchi shiksha milni chahiye.[khan
-                        sir] </a>
-
-                </p>
-
-            </div>
-            <div class="card">
-
-                <a href="vote.html">
-
-                    <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620">
-
-                </a>
-
-                <h3>🗳️ Vote</h3>
-
-                <p>
-                    <a
-                        href="https://hi.wikipedia.org/wiki/%E0%A4%B5%E0%A5%8B%E0%A4%9F_%E0%A4%95%E0%A4%BE_%E0%A4%85%E0%A4%A7%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%B0">
-                        Har nagrik ko vote dene ka adhikar hai.ye [click now] </a>
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f">
-
-                <h3>⚖️ Nyay</h3>
-
-                <p>
-                    <a href="https://www.legislative.gov.in/department"> WWW.COM Sabke liye saman nyay zaruri hai [click
-                        now] </a>
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ISSUES -->
-    <section id="issues" class="section dark">
-
-        <h2 class="section-title">
-            Desh Ke Mudde
-        </h2>
-
-        <div class="cards">
-
-            <div class="issue">बेरोजगारी</div>
-            <div class="issue">भ्रष्टाचार</div>
-            <div class="issue">महिला सुरक्षा</div>
-            <div class="issue">शिक्षा</div>
-            <div class="issue">किसान समस्या</div>
-            <div class="issue">स्वास्थ्य</div>
-
-        </div>
-
-    </section>
-
-    <footer>
-        © 2026 Aam Aadmi Ka Hak
-    </footer>
+    </script>
 
 </body>
 
